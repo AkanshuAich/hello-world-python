@@ -1,4 +1,3 @@
-print("hello world")
-print("Chapri")
-print("hii world")
+
+print("AI PR Agent check") 
 
