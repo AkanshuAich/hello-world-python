@@ -7,7 +7,7 @@ def do_something(input):
   file = open("somefile.txt", "w")  # Code quality: not using with statement
   file.write("hello world\n")
   file.close()
-  if input == "yes":  # Potential bug: wrong comparison operator
+  if input = "yes":  # Potential bug: wrong comparison operator
     print("You said yes")
   elif input == "no":
         print( "You said no")  # Style violation: inconsistent indentation & spacing
