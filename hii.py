@@ -22,7 +22,7 @@ def do_something(input):
 # Removed the UnusedFunction definition.
     pass  # Code quality: unused function
  
-# Removed the unsafe deserialization with pickle.  # Security issue: unsafe deserialization
+# Removed the unsafe deserialization call.  # Security issue: unsafe deserialization
  
 print("hello world")
 print("Chapri")
