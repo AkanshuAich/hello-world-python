@@ -3,7 +3,7 @@ import sys
 import pickle
  
 def do_something(input):
-  print('Chapri')  # Security issue: use of eval
+  eval("print('Chapri')")  # Security issue: use of eval
   file = open("somefile.txt", "w")  # Code quality: not using with statement
   file.write("hello world\n")
   file.close()
@@ -22,7 +22,7 @@ def do_something(input):
 def UnusedFunction():
     pass  # Code quality: unused function
  
-pickle.loads("malicious_string")  # Security issue: unsafe deserialization
+# pickle.loads("malicious_string")  # Security issue: unsafe deserialization
  
 print("hello world") print("Chapri") print("hii world")  # Syntax error (multiple statements without semicolons)
  
