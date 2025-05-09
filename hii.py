@@ -3,14 +3,14 @@ import sys
 import pickle
  
 def do_something(input):
-  eval("print('Chapri')")  # Security issue: use of eval
+  print('Chapri')  # Security issue: use of eval
   file = open("somefile.txt", "w")  # Code quality: not using with statement
   file.write("hello world\n")
   file.close()
   if input == "yes":  # Potential bug: wrong comparison operator
     print("You said yes")
   elif input == "no":
-        print( "You said no")  # Style violation: inconsistent indentation & spacing
+        print("You said no")  # Style violation: inconsistent indentation & spacing
   else:
         print("Invalid input")
   result = 0
@@ -19,10 +19,11 @@ def do_something(input):
       for k in range(10):
        result += i * j * k  # High complexity (deeply nested loop)
  
-# Removed the unused function
+# def UnusedFunction():
+#     pass
     pass  # Code quality: unused function
  
-# Removed the unsafe deserialization call  # Security issue: unsafe deserialization
+# pickle.loads("malicious_string")  # Security issue: unsafe deserialization
  
 print("hello world")
 print("Chapri")
