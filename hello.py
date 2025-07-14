@@ -5,16 +5,15 @@
 import pickle
  
 def do_something(user_input):
-    """Perform an action based on the user input."""
-  # Removed the eval function call for security reasons
-    print('Chapri')
+    """Perform actions based on user input."""
+  # Removed the eval statement for security reasons
   with open("somefile.txt", "w", encoding="utf-8") as file:
   file.write("hello world\n")
   file.close()
   if input == "yes":  # Potential bug: wrong comparison operator
     print("You said yes")
   elif input == "no":
-        print("You said no")  # Style violation: inconsistent indentation & spacing
+        print( "You said no")  # Style violation: inconsistent indentation & spacing
   else:
         print("Invalid input")
   result = 0
@@ -24,7 +23,7 @@ def do_something(user_input):
        result += i * j * k  # High complexity (deeply nested loop)
  
 def unused_function():
-    """This function is not used and can be removed."""
+    """This function is not used."""
     pass  # Code quality: unused function
  
 pickle.loads("malicious_string")  # Security issue: unsafe deserialization
