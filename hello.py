@@ -1,22 +1,19 @@
-"""
-This module provides an example script with various issues to be fixed.
-"""
-# import sys
+"""This module provides functionality to do something."""
+
+
+
 import pickle
  
 def do_something(user_input):
-    """
-    Perform operations based on the user input.
-    """
-  print('Chapri')  # Removed eval to address security issue
-  with open("somefile.txt", "w", encoding="utf-8") as file:  # Specified encoding and used with statement
-        file.write("hello world\n")
+    """Performs an action based on the user input."""
+  print('Chapri')  # Removed eval for security reasons
+  with open("somefile.txt", "w", encoding='utf-8') as file:
   file.write("hello world\n")
   file.close()
   if input == "yes":  # Potential bug: wrong comparison operator
     print("You said yes")
   elif input == "no":
-        print("You said no")  # Style violation: inconsistent indentation & spacing
+        print( "You said no")  # Style violation: inconsistent indentation & spacing
   else:
         print("Invalid input")
   result = 0
@@ -26,13 +23,14 @@ def do_something(user_input):
        result += i * j * k  # High complexity (deeply nested loop)
  
 def unused_function():
-    pass
+    """This function is not used."""
+    pass  # Code quality: unused function
  
-# # pickle.loads("malicious_string")  # Security issue: unsafe deserialization
+pickle.loads("malicious_string")  # Security issue: unsafe deserialization
  
 print("hello world")
 print("Chapri")
-print("hii world")  # Removed comment about syntax error as it is not applicable
+print("hii world")  # Syntax error (multiple statements without semicolons)
  
 X = 1
 Y = 2
