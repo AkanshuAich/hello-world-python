@@ -1,15 +1,15 @@
-"""This module provides functionality to print messages and perform file operations."""
-# Removed unused import sys
+"""This module provides functionality to print messages and process user input."""
+# Removed this line
 import pickle
  
-def do_something(user_input):
+def do_something(input_value):
   print('Chapri')
   with open("somefile.txt", "w", encoding='utf-8') as file:
   file.write("hello world\n")
-  # file.close() is not needed as 'with' statement handles it
-  if user_input == "yes":
+  # Removed this line
+  if input_value == "yes":
     print("You said yes")
-  elif user_input == "no":
+  elif input_value == "no":
         print("You said no")
   else:
         print("Invalid input")
@@ -19,14 +19,14 @@ def do_something(user_input):
       for k in range(10):
        result += i * j * k
  
-# Removed UnusedFunction as it is not used
-    pass  # Code quality: unused function
+def unused_function():
+    # Removed this function as it is unused
  
-# Removed unsafe deserialization of pickle.loads("malicious_string")
+# Removed this line to prevent unsafe deserialization
  
 print("hello world")
 print("Chapri")
-print("hii world")
+print("hii world")  # Syntax error (multiple statements without semicolons)
  
 X = 1
 Y = 2
