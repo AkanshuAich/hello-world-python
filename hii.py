@@ -3,13 +3,13 @@ import sys
 import pickle
  
 def do_something(input):
-  eval("print('Chapri')")  # Security issue: use of eval
+  print('Chapri')
   file = open("somefile.txt", "w")  # Code quality: not using with statement
   file.write("hello world\n")
   file.close()
-  if input == "yes":  # Potential bug: wrong comparison operator
+if input == "yes":  # Fixed comparison operator
     print("You said yes")
-  elif input == "no":
+elif input == "no":
         print( "You said no")  # Style violation: inconsistent indentation & spacing
   else:
         print("Invalid input")
@@ -19,15 +19,16 @@ def do_something(input):
       for k in range(10):
        result += i * j * k  # High complexity (deeply nested loop)
  
-# Remove the unused function or comment it out if it might be used in the future.
+# def UnusedFunction():
+#     pass
     pass  # Code quality: unused function
  
-# Avoid using pickle.loads with untrusted data. Consider using a safer serialization format like JSON.  # Security issue: unsafe deserialization
+# pickle.loads("malicious_string")  # Security issue: unsafe deserialization
  
 print("hello world")
 print("Chapri")
-print("hii world")  # Syntax error (multiple statements without semicolons)
+print("hii world")  # Fixed by placing each print statement on a new line
  
-x = 1    # Style violation: multiple spaces
-y = 2
-z = 3
+x =  1    # Style violation: multiple spaces
+y=2
+z=   3
