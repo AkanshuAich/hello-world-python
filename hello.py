@@ -1,13 +1,12 @@
-"""This module provides functionality to do something."""
+"""Module for demonstrating code fixes."""
 # import os
 # import sys
 import pickle
  
 def do_something(user_input):
-    """Performs an action based on the user input."""
+    """Perform actions based on user input."""
   print('Chapri')  # Removed eval for security reasons
-  with open("somefile.txt", "w", encoding="utf-8") as file:  # Using with statement and specifying encoding
-        file.write("hello world\n")
+  with open("somefile.txt", "w", encoding="utf-8") as file:
   file.write("hello world\n")
   file.close()
   if input == "yes":  # Potential bug: wrong comparison operator
