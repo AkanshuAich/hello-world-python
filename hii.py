@@ -20,7 +20,6 @@ elif input == "no":
        result += i * j * k  # High complexity (deeply nested loop)
  
 # def UnusedFunction():
-#     pass
     pass  # Code quality: unused function
  
 # pickle.loads("malicious_string")  # Security issue: unsafe deserialization
