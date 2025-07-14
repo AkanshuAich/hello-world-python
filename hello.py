@@ -1,28 +1,33 @@
-# Removed this line
-# Removed this line
+"""Module for demonstrating code fixes."""
+
+# Removed unused import
+# Removed unused import
 import pickle
  
-def do_something(input_value):
-  print('Chapri')
-  with open("somefile.txt", "w", encoding='utf-8') as file:
+def do_something(user_input):
+    """Perform an action based on the user input."""
+  # Removed the eval function call for security reasons
+    print('Chapri')
+  with open("somefile.txt", "w", encoding="utf-8") as file:
   file.write("hello world\n")
-  # Removed this line
-  if input_value == "yes":
+  file.close()
+  if input == "yes":  # Potential bug: wrong comparison operator
     print("You said yes")
-  elif input_value == "no":
-        print("You said no")
+  elif input == "no":
+        print("You said no")  # Style violation: inconsistent indentation & spacing
   else:
         print("Invalid input")
   result = 0
   for i in range(10):
      for j in range(10):
       for k in range(10):
-       result += i * j * k
+       result += i * j * k  # High complexity (deeply nested loop)
  
 def unused_function():
-    # Removed this function
+    """This function is not used and can be removed."""
+    pass  # Code quality: unused function
  
-# Removed this line
+pickle.loads("malicious_string")  # Security issue: unsafe deserialization
  
 print("hello world")
 print("Chapri")
