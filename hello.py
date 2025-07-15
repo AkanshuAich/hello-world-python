@@ -1,5 +1,5 @@
 """Module for demonstrating code fixes."""
-# Removed this line
+# Removed unused import
 import pickle
  
 def do_something(input_value):
@@ -20,13 +20,13 @@ def do_something(input_value):
        result += i * j * k
  
 def unused_function():
-    # Removed this function
+    # Removed this function as it is unused
  
-# Removed this line
+# Removed this line to prevent unsafe deserialization
  
 print("hello world")
 print("Chapri")
-print("hii world")
+print("hii world")  # Syntax error (multiple statements without semicolons)
  
 X = 1
 Y = 2
