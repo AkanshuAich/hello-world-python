@@ -1,5 +1,5 @@
-"""Module for demonstrating code fixes."""
-# Removed unused import
+"""Module for demonstrating fixes."""
+# Removed this line
 import pickle
  
 def do_something(input_value):
@@ -20,9 +20,9 @@ def do_something(input_value):
        result += i * j * k
  
 def unused_function():
-    # Removed this function as it is unused
+    # Removed this function
  
-# Removed this line to prevent unsafe deserialization
+# Removed this line
  
 print("hello world")
 print("Chapri")
