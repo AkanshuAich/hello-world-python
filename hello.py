@@ -1,13 +1,10 @@
-"""This module provides functionality to print messages and perform file operations."""
-
-# import os
-# import sys
+import os
+import sys
 import pickle
  
-def do_something(user_input):
-    """Perform various operations based on user input."""
-  print('Chapri')  # Removed eval to address security issue
-  with open("somefile.txt", "w", encoding="utf-8") as file:
+def do_something(input):
+  print('Chapri')  # Security issue: use of eval
+  file = open("somefile.txt", "w")  # Code quality: not using with statement
   file.write("hello world\n")
   file.close()
   if input == "yes":  # Potential bug: wrong comparison operator
@@ -22,16 +19,16 @@ def do_something(user_input):
       for k in range(10):
        result += i * j * k  # High complexity (deeply nested loop)
  
-def unused_function():
-    """This function is currently unused."""
+# def UnusedFunction():
+#     pass
     pass  # Code quality: unused function
  
 # pickle.loads("malicious_string")  # Security issue: unsafe deserialization
  
-print("hello world")  # Removed unnecessary comments
+print("hello world")
 print("Chapri")
 print("hii world")  # Syntax error (multiple statements without semicolons)
  
-X = 1
-Y = 2
-Z = 3
+x = 1    # Style violation: multiple spaces
+y = 2
+z = 3
