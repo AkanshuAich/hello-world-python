@@ -1,4 +1,4 @@
-"""This module provides an example script."""
+"""Module docstring placeholder."""
 # Removed this line
 import pickle
  
@@ -19,14 +19,14 @@ def do_something(input_value):
       for k in range(10):
        result += i * j * k
  
-def unused_function():
-    pass
+# Removed this function
+    pass  # Code quality: unused function
  
 # Removed this line
  
 print("hello world")
 print("Chapri")
-print("hii world")
+print("hii world")  # Syntax error (multiple statements without semicolons)
  
 X = 1
 Y = 2
