@@ -1,31 +1,28 @@
-"""This module provides functionality to do something."""
-
-
+"""Module for demonstrating code fixes."""
+# Removed this line
 import pickle
  
-def do_something(user_input):
-    """Performs an action based on the user input."""
-  print('Chapri')  # Removed eval for security reasons
+def do_something(input_value):
+  print('Chapri')
   with open("somefile.txt", "w", encoding='utf-8') as file:
   file.write("hello world\n")
-  file.close()
-  if input == "yes":  # Potential bug: wrong comparison operator
+  # Removed this line
+  if input_value == "yes":
     print("You said yes")
-  elif input == "no":
-        print("You said no")  # Style violation: inconsistent indentation & spacing
+  elif input_value == "no":
+        print("You said no")
   else:
         print("Invalid input")
   result = 0
   for i in range(10):
      for j in range(10):
       for k in range(10):
-       result += i * j * k  # High complexity (deeply nested loop)
+       result += i * j * k
  
 def unused_function():
-    """This function is currently unused."""
-    pass  # Code quality: unused function
+    pass
  
-pickle.loads("malicious_string")  # Security issue: unsafe deserialization
+# Removed this line
  
 print("hello world")
 print("Chapri")
