@@ -1,28 +1,31 @@
-"""This module provides functionality to print messages and perform file operations."""
-# import sys  # Removed unused import
+"""This module provides functionality to do something."""
+
+
 import pickle
  
-def do_something(input_value):
-  print('Chapri')
+def do_something(user_input):
+    """Performs an action based on the user input."""
+  print('Chapri')  # Removed eval for security reasons
   with open("somefile.txt", "w", encoding='utf-8') as file:
   file.write("hello world\n")
-  # file.close() is not needed as 'with' context manager will close the file
-  if input_value == "yes":
+  file.close()
+  if input == "yes":  # Potential bug: wrong comparison operator
     print("You said yes")
-  elif input_value == "no":
-        print("You said no")
+  elif input == "no":
+        print("You said no")  # Style violation: inconsistent indentation & spacing
   else:
         print("Invalid input")
   result = 0
   for i in range(10):
      for j in range(10):
       for k in range(10):
-       result += i * j * k
+       result += i * j * k  # High complexity (deeply nested loop)
  
 def unused_function():
-    # This function is unused and can be removed
+    """This function is currently unused."""
+    pass  # Code quality: unused function
  
-# pickle.loads("malicious_string")  # Removed unsafe deserialization
+pickle.loads("malicious_string")  # Security issue: unsafe deserialization
  
 print("hello world")
 print("Chapri")
