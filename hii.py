@@ -3,7 +3,7 @@ import sys
 import pickle
  
 def do_something(input):
-  print('Chapri')  # Security issue: removed use of eval
+  eval("print('Chapri')")  # Security issue: use of eval
   file = open("somefile.txt", "w")  # Code quality: not using with statement
   file.write("hello world\n")
   file.close()
@@ -19,14 +19,11 @@ def do_something(input):
       for k in range(10):
        result += i * j * k  # High complexity (deeply nested loop)
  
-# def UnusedFunction():
-    pass  # Code quality: unused function
+# Removed unused function
  
-# pickle.loads("malicious_string")  # Security issue: unsafe deserialization
+# Removed unsafe deserialization of a hardcoded malicious string
  
-print("hello world")
-print("Chapri")
-print("hii world")  # Syntax error (multiple statements without semicolons)
+print("hello world") print("Chapri") print("hii world")  # Syntax error (multiple statements without semicolons)
  
 x = 1    # Style violation: multiple spaces
 y = 2
