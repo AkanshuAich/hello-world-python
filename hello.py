@@ -1,28 +1,32 @@
-"""Module docstring: This module does something."""
-# Removed unused import sys
+"""Module for demonstrating code fixes."""
+
+# import os  # Unused import
+# import sys  # Unused import
 import pickle
  
 def do_something(input_value):
+    """Perform actions based on the given input."""
   print('Chapri')  # Removed eval for security reasons
-  with open("somefile.txt", "w", encoding='utf-8') as file:  # Using with statement and specifying encoding
+  with open("somefile.txt", "w", encoding='utf-8') as file:
   file.write("hello world\n")
-  # Removed file.close() as it's handled by the with statement
-  if input_value == "yes":  # Corrected variable name
+  # file.close()  # No longer needed due to 'with' statement
+  if input_value == "yes":
     print("You said yes")
   elif input_value == "no":
-        print("You said no")  # Corrected spacing
+        print("You said no")
   else:
         print("Invalid input")
   result = 0
   for i in range(10):
      for j in range(10):
       for k in range(10):
-       result += i * j * k  # High complexity (deeply nested loop)
+       result += i * j * k
  
 def unused_function():
+    """An unused function."""
     pass
  
-# Removed unsafe deserialization with pickle.loads
+# pickle.loads("malicious_string")  # Commented out due to security issue: unsafe deserialization
  
 print("hello world") print("Chapri") print("hii world")  # Syntax error (multiple statements without semicolons)
  
