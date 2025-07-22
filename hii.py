@@ -19,7 +19,7 @@ def do_something(input):
       for k in range(10):
        result += i * j * k  # High complexity (deeply nested loop)
  
-# def UnusedFunction():
+def UnusedFunction():
     pass  # Code quality: unused function
  
 # pickle.loads("malicious_string")  # Security issue: unsafe deserialization
