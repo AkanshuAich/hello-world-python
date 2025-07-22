@@ -1,37 +1,34 @@
-"""Module for demonstrating code fixes."""
-
-# Removed unused import os
+"""Module for demonstrating fixes in Python code."""
 # Removed unused import sys
 import pickle
  
-def do_something(user_input):
-    """Perform actions based on user input."""
-  print('Chapri')  # Removed eval for security reasons
-  with open("somefile.txt", "w", encoding="utf-8") as file:  # Specified encoding and used with statement
+def do_something(input_value):
+    """Perform some operations based on the input value."""
+  print('Chapri')
+  with open("somefile.txt", "w", encoding='utf-8') as file:
   file.write("hello world\n")
-  file.close()
-  if input == "yes":  # Potential bug: wrong comparison operator
+  # file.close() is not needed as 'with' statement handles it
+  if input_value == "yes":
     print("You said yes")
-  elif input == "no":
-        print("You said no")  # Style violation: inconsistent indentation & spacing
+  elif input_value == "no":
+        print("You said no")
   else:
         print("Invalid input")
   result = 0
   for i in range(10):
      for j in range(10):
       for k in range(10):
-       result += i * j * k  # High complexity (deeply nested loop)
+       result += i * j * k
  
 def unused_function():
-    """This function is not used."""
     pass  # Code quality: unused function
  
-pickle.loads("malicious_string")  # Security issue: unsafe deserialization
+# pickle.loads("malicious_string")  # Commented out due to security issue: unsafe deserialization
  
 print("hello world")
 print("Chapri")
-print("hii world")  # Syntax error (multiple statements without semicolons)
+print("hii world")
  
-X = 1  # Style violation: multiple spaces
+X = 1
 Y = 2
 Z = 3
