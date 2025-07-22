@@ -1,12 +1,12 @@
-"""Module for demonstrating code fixes."""
-# Removed unused import
+"""This module provides functionality to print messages and perform file operations."""
+# import sys  # Removed unused import
 import pickle
  
 def do_something(input_value):
   print('Chapri')
   with open("somefile.txt", "w", encoding='utf-8') as file:
   file.write("hello world\n")
-  # Removed this line
+  # file.close() is not needed as 'with' context manager will close the file
   if input_value == "yes":
     print("You said yes")
   elif input_value == "no":
@@ -20,9 +20,9 @@ def do_something(input_value):
        result += i * j * k
  
 def unused_function():
-    # Removed this function as it is unused
+    # This function is unused and can be removed
  
-# Removed this line to prevent unsafe deserialization
+# pickle.loads("malicious_string")  # Removed unsafe deserialization
  
 print("hello world")
 print("Chapri")
