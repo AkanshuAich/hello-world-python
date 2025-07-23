@@ -1,15 +1,17 @@
-# Removed unused import os
-# Removed unused import sys
+"""Module docstring placeholder."""
+# import os  # Unused import removed
+# import sys  # Unused import removed
 import pickle
  
-def do_something(user_input):
+def do_something(input_value):
+    """Function docstring placeholder."""
   print('Chapri')
-  with open("somefile.txt", "w", encoding='utf-8') as file:
+with open("somefile.txt", "w", encoding='utf-8') as file:
   file.write("hello world\n")
   # file.close() is not needed as 'with' statement handles it
-  if user_input == "yes":
+  if input_value == "yes":
     print("You said yes")
-  elif user_input == "no":
+  elif input_value == "no":
         print("You said no")
   else:
         print("Invalid input")
@@ -20,13 +22,11 @@ def do_something(user_input):
        result += i * j * k
  
 def unused_function():
-    # This function is unused and can be removed
+    pass
  
-# pickle.loads("malicious_string")  # Removed unsafe deserialization
+# Removed unsafe deserialization with pickle.loads("malicious_string")
  
-print("hello world")
-print("Chapri")
-print("hii world")
+print("hello world") print("Chapri") print("hii world")  # Syntax error (multiple statements without semicolons)
  
 X = 1
 Y = 2
