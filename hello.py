@@ -1,12 +1,11 @@
-"""Module docstring placeholder."""
-# import os  # Unused import removed
-# import sys  # Unused import removed
+"""Module for demonstrating code fixes."""
+# Removed unused import sys
 import pickle
  
 def do_something(input_value):
-    """Function docstring placeholder."""
+    """Perform some operations based on the input value."""
   print('Chapri')
-with open("somefile.txt", "w", encoding='utf-8') as file:
+  with open("somefile.txt", "w", encoding='utf-8') as file:
   file.write("hello world\n")
   # file.close() is not needed as 'with' statement handles it
   if input_value == "yes":
@@ -24,9 +23,11 @@ with open("somefile.txt", "w", encoding='utf-8') as file:
 def unused_function():
     pass
  
-# Removed unsafe deserialization with pickle.loads("malicious_string")
+# pickle.loads("malicious_string")  # Commented out due to security issue: unsafe deserialization
  
-print("hello world") print("Chapri") print("hii world")  # Syntax error (multiple statements without semicolons)
+print("hello world")
+print("Chapri")
+print("hii world")
  
 X = 1
 Y = 2
