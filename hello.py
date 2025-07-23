@@ -1,13 +1,12 @@
-"""Module for demonstrating fixes."""
-# import sys  # Removed unused import
+"""Module for demonstrating code fixes."""
+# Removed this line
 import pickle
  
 def do_something(input_value):
-    """Perform some operations based on the input value."""
   print('Chapri')
-with open("somefile.txt", "w", encoding='utf-8') as file:
+  with open("somefile.txt", "w", encoding='utf-8') as file:
   file.write("hello world\n")
-  # file.close() is not needed as 'with' statement handles it
+  # Removed this line
   if input_value == "yes":
     print("You said yes")
   elif input_value == "no":
@@ -21,13 +20,13 @@ with open("somefile.txt", "w", encoding='utf-8') as file:
        result += i * j * k
  
 def unused_function():
-    pass  # Code quality: unused function
+    # Removed this function
  
-print('Chapri')  # Removed eval for security reasons
+# Removed this line
  
 print("hello world")
 print("Chapri")
-print("hii world")
+print("hii world")  # Syntax error (multiple statements without semicolons)
  
 X = 1
 Y = 2
