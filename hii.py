@@ -22,11 +22,9 @@ def do_something(input):
 # def UnusedFunction():
     pass  # Code quality: unused function
  
-# pickle.loads("malicious_string")  # Security issue: unsafe deserialization
+# Removed unsafe deserialization with pickle.loads("malicious_string")
  
-print("hello world")
-print("Chapri")
-print("hii world")  # Syntax error (multiple statements without semicolons)
+print("hello world") print("Chapri") print("hii world")  # Syntax error (multiple statements without semicolons)
  
 x = 1    # Style violation: multiple spaces
 y = 2
