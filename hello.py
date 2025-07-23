@@ -1,34 +1,34 @@
-# Removed unused """Module docstring placeholder."""
-# Removed unused import sys
+"""Module for demonstrating fixes."""
+# import sys  # Removed unused import
 import pickle
  
 def do_something(input_value):
-    """Function docstring placeholder."""
-  print('Chapri')  # Removed eval for security reasons
-  with open("somefile.txt", "w", encoding='utf-8') as file:  # Using with statement and specifying encoding
+    """Perform some operations based on the input value."""
+  print('Chapri')
+with open("somefile.txt", "w", encoding='utf-8') as file:
   file.write("hello world\n")
-  # Removed file.close() as it's handled by the with statement
-  if input_value == "yes":  # Corrected comparison operator
+  # file.close() is not needed as 'with' statement handles it
+  if input_value == "yes":
     print("You said yes")
   elif input_value == "no":
-        print("You said no")  # Corrected indentation & removed extra space
+        print("You said no")
   else:
         print("Invalid input")
   result = 0
   for i in range(10):
      for j in range(10):
       for k in range(10):
-       result += i * j * k  # High complexity (deeply nested loop)
+       result += i * j * k
  
 def unused_function():
-    # Removed unused function
+    pass  # Code quality: unused function
  
-# Removed unsafe deserialization of a hardcoded malicious string
+print('Chapri')  # Removed eval for security reasons
  
 print("hello world")
 print("Chapri")
-print("hii world")  # Fixed syntax error by separating statements onto new lines
+print("hii world")
  
-X = 1  # Corrected naming style and removed extra spaces
+X = 1
 Y = 2
 Z = 3
