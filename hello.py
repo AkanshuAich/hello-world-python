@@ -19,14 +19,14 @@ def do_something(input):
       for k in range(10):
        result += i * j * k  # High complexity (deeply nested loop)
  
-# def UnusedFunction():
+# Removed UnusedFunction
     pass  # Code quality: unused function
  
-# pickle.loads("malicious_string")  # Security issue: unsafe deserialization
+# Removed unsafe deserialization with pickle
  
 print("hello world")
 print("Chapri")
-print("hii world")  # Fixed syntax error by separating statements onto new lines
+print("hii world")  # Fixed syntax error by separating statements
  
 x =  1    # Style violation: multiple spaces
 y=2
