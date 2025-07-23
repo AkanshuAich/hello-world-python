@@ -1,12 +1,17 @@
-# Removed unused import os
-# Removed unused import sys
-import pickle
+"""
+This module provides functionality to print messages and perform file operations.
+"""
+
+
  
 def do_something(input_value):
-  print('Chapri')  # Removed eval for security reasons
-  with open("somefile.txt", "w", encoding='utf-8') as file:  # Using with statement and specifying encoding
+    """
+    Perform actions based on the input value, write to a file, and calculate a result.
+    """
+  print('Chapri')
+  with open("somefile.txt", "w", encoding='utf-8') as file:
   file.write("hello world\n")
-  # Removed file.close() as it's not needed with the with statement
+  
   if input_value == "yes":
     print("You said yes")
   elif input_value == "no":
@@ -17,16 +22,16 @@ def do_something(input_value):
   for i in range(10):
      for j in range(10):
       for k in range(10):
-       result += i * j * k  # High complexity (deeply nested loop)
+       result += i * j * k
  
 def unused_function():
-    pass  # Code quality: unused function
+    pass
  
-# Removed unsafe deserialization with pickle.loads
+# pickle.loads("malicious_string")  # Security issue: unsafe deserialization
  
 print("hello world")
 print("Chapri")
-print("hii world")  # Fixed syntax error by separating statements onto new lines
+print("hii world")
  
 X = 1
 Y = 2
