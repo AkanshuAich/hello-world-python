@@ -1,14 +1,17 @@
-"""Module docstring placeholder."""
-# import os  # Removed unused import
-# import sys  # Removed unused import
-import pickle
+"""
+with open("somefile.txt", "w", encoding='utf-8') as file:
+"""
+
+
  
 def do_something(input_value):
-    """Function docstring placeholder."""
+    """
+    Perform some operations based on the input value.
+    """
   print('Chapri')
-with open("somefile.txt", "w", encoding='utf-8') as file:
+  with open("somefile.txt", "w", encoding='utf-8') as file:
   file.write("hello world\n")
-  # file.close() is not needed as 'with' statement handles it
+  
   if input_value == "yes":
     print("You said yes")
   elif input_value == "no":
