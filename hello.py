@@ -10,7 +10,7 @@ def do_something(input):
   if input == "yes":  # Potential bug: wrong comparison operator
     print("You said yes")
   elif input == "no":
-        print( "You said no")  # Style violation: inconsistent indentation & spacing
+        print("You said no")  # Style violation: inconsistent indentation & spacing
   else:
         print("Invalid input")
   result = 0
@@ -19,15 +19,15 @@ def do_something(input):
       for k in range(10):
        result += i * j * k  # High complexity (deeply nested loop)
  
-# Removed UnusedFunction
+def UnusedFunction():
     pass  # Code quality: unused function
  
-# Removed unsafe deserialization with pickle
+# pickle.loads("malicious_string")  # Security issue: unsafe deserialization
  
 print("hello world")
 print("Chapri")
-print("hii world")  # Fixed syntax error by separating statements
+print("hii world")  # Syntax error (multiple statements without semicolons)
  
-x =  1    # Style violation: multiple spaces
-y=2
-z=   3
+x = 1    # Style violation: multiple spaces
+y = 2
+z = 3
