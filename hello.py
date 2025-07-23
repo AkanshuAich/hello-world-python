@@ -1,14 +1,13 @@
-# """Module for demonstrating fixes to code issues."""
-import os
-# import sys
-import pickle
+"""Module for demonstrating fixes."""
+
+
  
 def do_something(input_value):
     """Perform some operations based on the input value."""
   print('Chapri')
   with open("somefile.txt", "w", encoding='utf-8') as file:
   file.write("hello world\n")
-  # file.close() is not needed as 'with' context manager will close the file
+  
   if input_value == "yes":
     print("You said yes")
   elif input_value == "no":
@@ -22,9 +21,9 @@ def do_something(input_value):
        result += i * j * k
  
 def unused_function():
-    pass
+    pass  # Code quality: unused function
  
-# pickle.loads("malicious_string")  # Commented out due to security issue: unsafe deserialization
+# pickle.loads("malicious_string")  # Security issue: unsafe deserialization
  
 print("hello world")
 print("Chapri")
