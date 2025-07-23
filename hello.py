@@ -1,31 +1,29 @@
 import os
 import sys
 import pickle
- 
-def do_something(input):
-  eval("print('Chapri')")  # Security issue: use of eval
-  file = open("somefile.txt", "w")  # Code quality: not using with statement
-  file.write("hello world\n")
-  file.close()
-  if input = "yes":  # Potential bug: wrong comparison operator
-    print("You said yes")
-  elif input == "no":
-        print( "You said no")  # Style violation: inconsistent indentation & spacing
-  else:
-        print("Invalid input")
-  result = 0
-  for i in range(10):
-     for j in range(10):
-      for k in range(10):
-       result += i * j * k  # High complexity (deeply nested loop)
- 
-def UnusedFunction():
-    pass  # Code quality: unused function
- 
-pickle.loads("malicious_string")  # Security issue: unsafe deserialization
- 
-print("hello world") print("Chapri") print("hii world")  # Syntax error (multiple statements without semicolons)
- 
-x =  1    # Style violation: multiple spaces
-y=2
-z=   3
+import hii  # Importing the hii module
+
+def main():
+    user_input = "yes"
+    hii.do_something(user_input)
+
+    print("Calling outer_function from hii:")
+    result = hii.outer_function(15)  # Cross-module call
+    print(f"Result from outer_function: {result}")
+
+    print("Calling another_function from hii:")
+    hii.another_function()  # Cross-module call
+
+    unused = hii.UnusedFunction()  # Should be detected as unused even if called like this
+
+    # Security issue still here
+    eval("print('Eval used in hello.py')")
+
+    # Deserialization issue
+    pickle.loads("malicious_string")
+
+    # Syntax error example (intended)
+    print("hello from hello.py") print("this will cause a syntax error")
+
+if __name__ == "__main__":
+    main()
