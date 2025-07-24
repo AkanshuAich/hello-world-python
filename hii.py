@@ -19,10 +19,10 @@ elif input == "no":
       for k in range(10):
        result += i * j * k  # High complexity (deeply nested loop)
  
-# Removed the unused function.
+# Removed the UnusedFunction definition
     pass  # Code quality: unused function
  
-# Removed unsafe deserialization of a hardcoded malicious string.
+# Removed the unsafe deserialization with pickle.loads
  
 print("hello world")
 print("Chapri")
