@@ -1,15 +1,15 @@
-"""This module provides an example script."""
-# Removed this line
+import os
+import sys
 import pickle
  
-def do_something(input_value):
+def do_something(input):
   print('Chapri')
-  with open("somefile.txt", "w", encoding='utf-8') as file:
+  file = open("somefile.txt", "w")  # Code quality: not using with statement
   file.write("hello world\n")
-  # Removed this line
-  if input_value == "yes":
+  file.close()
+  if input == "yes":
     print("You said yes")
-  elif input_value == "no":
+  elif input == "no":
         print("You said no")
   else:
         print("Invalid input")
@@ -17,17 +17,17 @@ def do_something(input_value):
   for i in range(10):
      for j in range(10):
       for k in range(10):
-       result += i * j * k
+       result += i * j * k  # High complexity (deeply nested loop)
  
-def unused_function():
-    pass
+# def UnusedFunction():
+    pass  # Code quality: unused function
  
-# Removed this line
+# pickle.loads("malicious_string")  # Security issue: unsafe deserialization
  
 print("hello world")
 print("Chapri")
 print("hii world")
  
-X = 1
-Y = 2
-Z = 3
+x = 1
+y = 2
+z = 3
