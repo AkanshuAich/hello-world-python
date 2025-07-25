@@ -19,7 +19,7 @@ def do_something(input):
       for k in range(10):
        result += i * j * k  # High complexity (deeply nested loop)
  
-# Removed the entire UnusedFunction definition.
+# Removed the unused function.
     pass  # Code quality: unused function
  
 # Removed the unsafe deserialization call.
