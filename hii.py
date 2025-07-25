@@ -9,7 +9,7 @@ def do_something(input):
   file.close()
 if input == "yes":  # Fixed comparison operator
     print("You said yes")
-  elif input == "no":
+elif input == "no":
         print( "You said no")  # Style violation: inconsistent indentation & spacing
   else:
         print("Invalid input")
@@ -19,10 +19,10 @@ if input == "yes":  # Fixed comparison operator
       for k in range(10):
        result += i * j * k  # High complexity (deeply nested loop)
  
-# Removed the UnusedFunction definition
+# Removed the unused function to improve code quality.
     pass  # Code quality: unused function
  
-# Removed the unsafe deserialization with pickle.loads
+# Removed the unsafe deserialization call to address the security issue.
  
 print("hello world")
 print("Chapri")
