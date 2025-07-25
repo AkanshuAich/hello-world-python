@@ -1,33 +1,33 @@
-import os
-import sys
+"""This module provides an example script."""
+# Removed this line
 import pickle
  
-def do_something(input):
+def do_something(input_value):
   print('Chapri')
-  file = open("somefile.txt", "w")  # Code quality: not using with statement
+  with open("somefile.txt", "w", encoding='utf-8') as file:
   file.write("hello world\n")
-  file.close()
-  if input == "yes":
+  # Removed this line
+  if input_value == "yes":
     print("You said yes")
-  elif input == "no":
-        print( "You said no")  # Style violation: inconsistent indentation & spacing
+  elif input_value == "no":
+        print("You said no")
   else:
         print("Invalid input")
   result = 0
   for i in range(10):
      for j in range(10):
       for k in range(10):
-       result += i * j * k  # High complexity (deeply nested loop)
+       result += i * j * k
  
-# Removed the unused function.
-    pass  # Code quality: unused function
+def unused_function():
+    pass
  
-# Removed the unsafe deserialization call.
+# Removed this line
  
 print("hello world")
 print("Chapri")
 print("hii world")
  
-x = 1
-y = 2
-z = 3
+X = 1
+Y = 2
+Z = 3
