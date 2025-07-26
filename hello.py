@@ -1,7 +1,7 @@
 import os
 import sys
 import pickle
-import hii  # Importing the hii module
+# import hii  # Importing the hii module
 
 def main():
     user_input = "yes"
@@ -14,16 +14,17 @@ def main():
     print("Calling another_function from hii:")
     hii.another_function()  # Cross-module call
 
-    unused = hii.UnusedFunction()  # Should be detected as unused even if called like this
+    # unused = hii.UnusedFunction()  # Should be detected as unused even if called like this
 
     # Security issue still here
-    eval("print('Eval used in hello.py')")
+    # eval("print('Eval used in hello.py')")
 
     # Deserialization issue
-    pickle.loads("malicious_string")
+    # pickle.loads("malicious_string")
 
     # Syntax error example (intended)
-    print("hello from hello.py") print("this will cause a syntax error")
+    print("hello from hello.py")
+print("this will cause a syntax error")
 
 if __name__ == "__main__":
     main()
