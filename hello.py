@@ -14,7 +14,7 @@ def main():
     print("Calling another_function from hii:")
     hii.another_function()  # Cross-module call
 
-    # unused = hii.UnusedFunction()  # Should be detected as unused even if called like this
+    unused = hii.UnusedFunction()  # Should be detected as unused even if called like this
 
     # Security issue still here
     # eval("print('Eval used in hello.py')")
