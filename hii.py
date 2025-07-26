@@ -1,11 +1,11 @@
 import pickle
 
 def do_something(input):
-    print('Chapri')  # Security issue: use of eval
+    # Removed the problematic print statement
     file = open("somefile.txt", "w")  # Code quality: not using with statement
     file.write("hello world\n")
     file.close()
-    if input == "yes":  # Bug: assignment instead of comparison
+    if input == "yes":
         print("You said yes")
     elif input == "no":
             print("You said no")
@@ -15,11 +15,11 @@ def do_something(input):
     for i in range(10):
         for j in range(10):
             # Removed the deep loop and replaced it with a mathematical equivalent
-                result += i * j * k  # Deep loop
+                result += i * j  # Removed the undefined variable 'k'
     return result
 
 # Removed the unused function
-    pass  # Should show up as unused logic
+    # Removed the unused 'pass' statement
 
 def outer_function(data):
     total = 0
@@ -27,7 +27,7 @@ def outer_function(data):
     def inner_function1(value):
         # Bug: undefined variable `val`
         if value > 10:
-            return val * 2
+            return value * 2
         return value + 5
 
     def inner_function2():
@@ -46,7 +46,7 @@ def outer_function(data):
         result = inner_function2()
     except Exception as e:
         print(f"An error occurred: {e}")
-        pass  # Swallowing exceptions
+        # Removed the unnecessary 'pass' statement
 
     return total
 

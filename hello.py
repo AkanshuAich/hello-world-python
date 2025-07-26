@@ -1,7 +1,7 @@
 import os
 import sys
 import pickle
-# import hii  # Importing the hii module
+import hii  # Importing the hii module
 
 def main():
     user_input = "yes"
@@ -17,10 +17,10 @@ def main():
     # unused = hii.UnusedFunction()  # Should be detected as unused even if called like this
 
     # Security issue still here
-    # eval("print('Eval used in hello.py')")
+    # Avoid using eval as it can execute arbitrary code
 
     # Deserialization issue
-    # pickle.loads("malicious_string")
+    # Avoid using pickle.loads with untrusted data
 
     # Syntax error example (intended)
     print("hello from hello.py")
