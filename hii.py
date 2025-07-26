@@ -2,7 +2,7 @@ import pickle
 
 def do_something(input):
     # Removed the problematic print statement
-    file = open("somefile.txt", "w")  # Code quality: not using with statement
+    with open("somefile.txt", "w") as file:
     file.write("hello world\n")
     file.close()
     if input == "yes":
@@ -43,7 +43,7 @@ def outer_function(data):
 
     try:
         total += inner_function1(data)
-        result = inner_function2()
+        total += inner_function2()
     except Exception as e:
         print(f"An error occurred: {e}")
         # Removed the unnecessary 'pass' statement

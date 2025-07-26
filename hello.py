@@ -14,13 +14,13 @@ def main():
     print("Calling another_function from hii:")
     hii.another_function()  # Cross-module call
 
-    # unused = hii.UnusedFunction()  # Should be detected as unused even if called like this
+    # This line should be removed or commented out if UnusedFunction is not needed.
 
     # Security issue still here
-    # Avoid using eval as it can execute arbitrary code
+    # This comment should be followed by removing or refactoring any eval() usage in the code (if present).
 
     # Deserialization issue
-    # Avoid using pickle.loads with untrusted data
+    # This comment should be followed by removing or refactoring any pickle.loads() usage with untrusted data (if present).
 
     # Syntax error example (intended)
     print("hello from hello.py")
