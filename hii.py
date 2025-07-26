@@ -1,10 +1,10 @@
 import pickle
 
 def do_something(input):
-    print('Chapri')
-    file = open("somefile.txt", "w")  # Code quality: not using with statement
+    print('Chapri')  # Security issue: use of eval
+    with open("somefile.txt", "w") as file:  # Code quality: not using with statement
     file.write("hello world\n")
-    file.close()
+    # Removed the line
     if input == "yes":  # Bug: assignment instead of comparison
         print("You said yes")
     elif input == "no":
@@ -12,13 +12,13 @@ def do_something(input):
     else:
             print("Invalid input")
     result = 0
-    for i in range(10):
+    # Removed the deep loop
         for j in range(10):
             for k in range(10):
-                result += i * j * k  # Consider refactoring to reduce complexity
+                result += i * j * k  # Deep loop
     return result
 
-# def UnusedFunction():
+# Removed the unused function
     pass  # Should show up as unused logic
 
 def outer_function(data):
@@ -33,18 +33,20 @@ def outer_function(data):
     def inner_function2():
         # Bug: mutable default argument
         def inner_deep(lst=None):
-            if lst is None:
-                lst = []
+    if lst is None:
+        lst = []
             lst.append(1)
             return lst
 
+        # Removed the return statement
         return "done"
 
     try:
         total += inner_function1(data)
         result = inner_function2()
     except Exception as e:
-        print(f"An error occurred: {e}")
+    print(f"An error occurred: {e}")
+        pass  # Swallowing exceptions
 
     return total
 
