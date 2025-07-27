@@ -43,7 +43,7 @@ def outer_function(data):
 
     try:
         total += inner_function1(data)
-        total += sum(inner_function2())
+        total += sum(inner_function2()())
     except Exception as e:
         print(f"An error occurred: {e}")
         # Removed the unnecessary 'pass' statement
@@ -54,12 +54,24 @@ def another_function():
     # Removed the nested_buggy function as it is not used
         # Removed the nested_buggy function as it is not used
     # if x == 5:
+    #     # Removed the nested_buggy function as it is not used
+    # if x == 5:
     #     print("Five")
     # else:
     #     print("Not five")
 
     # nested_buggy(5)
-            print("Five")
+    # else:
+    #     print("Not five")
+
+    # nested_buggy(5)
+            # Removed the nested_buggy function as it is not used
+    # if x == 5:
+    #     print("Five")
+    # else:
+    #     print("Not five")
+
+    # nested_buggy(5)
         else:
             print("Not five")
 

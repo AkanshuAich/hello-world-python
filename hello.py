@@ -1,18 +1,18 @@
 import os
 import sys
 import pickle
-import hii  # Importing the hii module
+# import hii  # Importing the hii module
 
 def main():
     user_input = "yes"
-    # hii.do_something(user_input)
+    # This is a placeholder for future code or a reminder to implement the function.
 
     print("Calling outer_function from hii:")
-    result = hii.outer_function(15)  # Cross-module call
+    # result = hii.outer_function(15)  # Cross-module call
     print(f"Result from outer_function: {result}")
 
     print("Calling another_function from hii:")
-    hii.another_function()  # Cross-module call
+    # hii.another_function()  # Cross-module call
 
     # UnusedFunction has been removed or commented out as it is not needed.
 
