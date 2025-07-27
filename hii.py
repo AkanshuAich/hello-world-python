@@ -15,7 +15,7 @@ def do_something(input):
     for i in range(10):
         for j in range(10):
             # Removed the deep loop and replaced it with a mathematical equivalent
-                result += i * j  # Removed the undefined variable 'k'
+    result += i * j  # Removed the undefined variable 'k'
     return result
 
 # This comment and the following whitespace should be removed entirely.
