@@ -52,7 +52,13 @@ def outer_function(data):
 
 def another_function():
     # Removed the nested_buggy function as it is not used
-        if x == 5:
+        # Removed the nested_buggy function as it is not used
+    # if x == 5:
+    #     print("Five")
+    # else:
+    #     print("Not five")
+
+    # nested_buggy(5)
             print("Five")
         else:
             print("Not five")
