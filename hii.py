@@ -19,7 +19,7 @@ def do_something(input):
     return result
 
 # This comment and the following whitespace should be removed entirely.
-    # Removed the unused 'pass' statement
+    
 
 def outer_function(data):
     total = 0
@@ -38,7 +38,7 @@ def outer_function(data):
             lst.append(1)
             return lst
 
-        # Removed the return statement to make the code below reachable
+        
         # Removed the print statement as it is no longer needed
 
     try:

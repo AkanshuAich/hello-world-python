@@ -1,10 +1,10 @@
 import os
 import sys
 import pickle
-import hii  # Importing the hii module
+# import hii  # Importing the hii module
 
 def main():
-    user_input = "yes"
+    # user_input = "yes"
     # This is a placeholder for future code or a reminder to implement the function.
 
     print("Calling outer_function from hii:")
